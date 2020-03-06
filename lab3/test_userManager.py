@@ -2,7 +2,7 @@ import unittest
 from UserDirectoryManager import UserDirectoryManager as UDM
 
 
-class TestingFilecmp(unittest.TestCase):
+class TestingUserManager(unittest.TestCase):
     def test_add_record(self):
         udm = UDM()
         output = udm.add_record('name', 'g@g.com', 22, 'Somewhere')
