@@ -10,7 +10,8 @@ class MyPowerList():
 
     def remove_item_at(self, index):
         if index >= len(self.power_list):
-            raise Exception('Index out of bounds, remember it is a 0-index list')
+            raise Exception(
+                'Index out of bounds, remember it is a 0-index list')
 
         del self.power_list[index]
 

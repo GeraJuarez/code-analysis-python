@@ -5,7 +5,7 @@ class UserDirectoryManager():
             self.address = address
             self.phone = phone
             self.email = email
-        
+
         def __str__(self):
             return f'{self.name},{self.address},{self.phone},{self.email}'
 
@@ -22,10 +22,10 @@ class UserDirectoryManager():
     def create_record(self, name, address, phone, email):
         if email in self.email_dir:
             raise Exception('User email already registered')
-        
+
         new_user = self.User(name, address, phone, email)
         self.email_dir[email] = new_user
-        
+
         self.name_dir.setdefault(name, []).append(email)
 
     def save_to_file(self, file_path='users_out.txt'):
@@ -36,7 +36,7 @@ class UserDirectoryManager():
     def load_from_file(self, file_path='users_out.txt'):
         with open(file_path, "r") as fp:
             for line in fp:
-                values =  [ data.rstrip('\n') for data in line.split(',') ]
+                values = [data.rstrip('\n') for data in line.split(',')]
                 self.create_record(*values)
 
     def search_by_email(self, email):
