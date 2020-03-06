@@ -1,6 +1,7 @@
 import unittest
 from UserDirectoryManager import UserDirectoryManager as UDM
 
+
 class TestingFilecmp(unittest.TestCase):
     def test_add_record(self):
         udm = UDM()
@@ -27,7 +28,7 @@ class TestingFilecmp(unittest.TestCase):
         udm = UDM()
         output = udm.add_record('name', 'g@g.com', 22, 'Somewhere')
         deleted = udm.delete_record_by_email('g@g.com')
-        
+
         self.assertEqual(output, deleted)
         self.assertIsNone(udm.email_dir.get('g@g.com'))
         self.assertIsNone(udm.age_dir.get(22))
@@ -45,7 +46,7 @@ class TestingFilecmp(unittest.TestCase):
         deleted = udm.delete_record_by_email('g2@g.com')
 
         self.assertIsNone(deleted)
-    
+
     def test_search_email(self):
         udm = UDM()
         udm.add_record('name', 'g@g.com', 22, 'Somewhere')
@@ -59,7 +60,7 @@ class TestingFilecmp(unittest.TestCase):
         udm.add_record('name', 'g@g.com', 22, 'Somewhere')
         udm.delete_record_by_email('g@g.com')
         found = udm.search_by_email('g@g.com')
-        
+
         self.assertIsNone(found)
 
     def test_search_email_non_existent(self):
@@ -67,14 +68,14 @@ class TestingFilecmp(unittest.TestCase):
         udm.add_record('name', 'g@g.com', 22, 'Somewhere')
         udm.delete_record_by_email('g@g.com')
         found = udm.search_by_email('g2@g.com')
-        
+
         self.assertIsNone(found)
 
     def test_search_email_other_type(self):
         udm = UDM()
         udm.add_record('name', 'g@g.com', 22, 'Somewhere')
         found = udm.search_by_email(22)
-        
+
         self.assertIsNone(found)
 
     def test_search_age(self):
@@ -121,7 +122,7 @@ class TestingFilecmp(unittest.TestCase):
         records = udm.get_all_records()
 
         self.assertFalse(records)
-    
+
     def test_get_all_filled(self):
         udm = UDM()
         created1 = udm.add_record('name', 'g@g.com', 22, 'Somewhere')
@@ -144,6 +145,7 @@ class TestingFilecmp(unittest.TestCase):
         self.assertTrue(records)
         self.assertEqual(2, len(records))
         self.assertNotIn(created1, records)
+
 
 if __name__ == "__main__":
     unittest.main()
