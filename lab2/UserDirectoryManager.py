@@ -6,10 +6,10 @@ class UserDirectoryManager():
             self.phone = phone
             self.email = email
 
-        def __str__(self):
+        def __str__(self):  # pragma: no cover
             return f'{self.name},{self.address},{self.phone},{self.email}'
 
-        def __repr__(self):
+        def __repr__(self):  # pragma: no cover
             return f'{self.name},{self.address},{self.phone},{self.email}'
 
     def __init__(self):
@@ -20,6 +20,9 @@ class UserDirectoryManager():
         return list(self.email_dir.values())
 
     def create_record(self, name, address, phone, email):
+        if name is None:
+            raise TypeError('name must not be none')
+
         if email in self.email_dir:
             raise Exception('User email already registered')
 
@@ -27,6 +30,7 @@ class UserDirectoryManager():
         self.email_dir[email] = new_user
 
         self.name_dir.setdefault(name, []).append(email)
+        return new_user
 
     def save_to_file(self, file_path='users_out.txt'):
         with open(file_path, "w") as fp:
@@ -41,7 +45,3 @@ class UserDirectoryManager():
 
     def search_by_email(self, email):
         return self.email_dir.get(email, None)
-
-    def search_by_name(self, name):
-        emails = self.name_dir.get(name, '')
-        return emails
