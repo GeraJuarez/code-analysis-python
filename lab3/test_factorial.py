@@ -64,5 +64,5 @@ class TestingFactorial(unittest.TestCase):
             math.factorial(input_)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

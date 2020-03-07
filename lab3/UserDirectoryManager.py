@@ -6,7 +6,7 @@ class UserDirectoryManager():
             self.age = age
             self.origin = origin
 
-        def __repr__(self):
+        def __repr__(self):  # pragma: no cover
             return f'{self.name},{self.email},{self.age},{self.origin}'
 
     def __init__(self):

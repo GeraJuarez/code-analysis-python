@@ -1,6 +1,7 @@
 import unittest
 import filecmp
 
+
 class TestingFilecmp(unittest.TestCase):
     def test_same_file(self):
         input1 = '1.txt'
@@ -38,6 +39,5 @@ class TestingFilecmp(unittest.TestCase):
         self.assertFalse(output)
 
 
-
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()

@@ -147,5 +147,5 @@ class TestingUserManager(unittest.TestCase):
         self.assertNotIn(created1, records)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     unittest.main()
