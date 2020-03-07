@@ -27,7 +27,7 @@ def decimal_to_roman(decimal_input):
     return roman_output
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     import argparse
 
     parser = argparse.ArgumentParser(description='Decimal to Roman Converter')
