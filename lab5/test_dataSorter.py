@@ -21,6 +21,12 @@ class TestDataSorter(unittest.TestCase):
 
     def test_merge_sort3(self):
         ds = DataSorter()
+        arr = None
+        ds.execute_merge_sort(data=arr)
+        self.assertFalse(ds.data)
+
+    def test_merge_sort3(self):
+        ds = DataSorter()
         arr = ['z2', 'a', 'b', '123', '512']
         ds.execute_merge_sort(data=arr)
         self.assertTrue(self.is_sorted(arr))
@@ -35,6 +41,11 @@ class TestDataSorter(unittest.TestCase):
         ds = DataSorter()
         with self.assertRaises(IOError):
             ds.set_input_data('sample.txt')
+
+    def test_load_file_err2(self):
+        ds = DataSorter()
+        with self.assertRaises(TypeError):
+            ds.set_input_data(None)
 
     def test_save_file(self):
         ds = DataSorter()

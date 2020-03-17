@@ -6,6 +6,9 @@ class DataSorter(object):
         self.data = []
 
     def set_input_data(self, file_path_name):
+        if file_path_name is None:
+            raise TypeError('File path must not be None')
+
         if not file_path_name.endswith('.csv'):
             raise IOError('File must be a csv file')
 
