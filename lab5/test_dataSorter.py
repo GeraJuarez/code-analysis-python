@@ -25,7 +25,7 @@ class TestDataSorter(unittest.TestCase):
         ds.execute_merge_sort(data=arr)
         self.assertFalse(ds.data)
 
-    def test_merge_sort3(self):
+    def test_merge_sort4(self):
         ds = DataSorter()
         arr = ['z2', 'a', 'b', '123', '512']
         ds.execute_merge_sort(data=arr)
