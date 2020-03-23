@@ -1,5 +1,5 @@
-class UserDirectoryManager():
-    """The UserDirectoryManager keeps track of saved users.
+class UserDirectoryManager2():
+    """The UserDirectoryManager2 keeps track of saved users.
 
     It manages user information and enables fast queries to look for User by
     either email or age.

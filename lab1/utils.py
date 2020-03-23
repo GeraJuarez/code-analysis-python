@@ -1,3 +1,7 @@
+"""@package utils
+Statitstics functions for lab1.
+"""
+
 import math
 
 

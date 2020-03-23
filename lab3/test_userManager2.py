@@ -1,10 +1,10 @@
 import unittest
-from UserDirectoryManager import UserDirectoryManager as UDM
+from UserDirectoryManager2 import UserDirectoryManager2 as UDM
 
 
-class TestingUserManager(unittest.TestCase):
-    """The TestingUserManager class runs some unit tests
-    for the UserDirectoryManager class.
+class TestingUserManager2(unittest.TestCase):
+    """The TestingUserManager2 class runs some unit tests
+    for the UserDirectoryManager2 class.
     """
 
     def test_add_record(self):

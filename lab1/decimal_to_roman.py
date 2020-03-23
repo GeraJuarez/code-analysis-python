@@ -1,3 +1,7 @@
+"""@package Decimal2Roman
+Decimal to roman number converter for lab1
+"""
+
 ROMAN_SYMBOL = {
     1: 'I',
     4: 'IV',
