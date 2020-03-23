@@ -16,6 +16,15 @@ ROMAN_SYMBOL = {
 
 
 def decimal_to_roman(decimal_input):
+    """Convert a decimal number into a roman number.
+
+    Args:
+        decimal_input: an integer number.
+
+    Returns:
+        A string containing the roman number.
+    """
+
     roman_output = ''
 
     for key in reversed(list(ROMAN_SYMBOL.keys())):
