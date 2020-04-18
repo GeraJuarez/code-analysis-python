@@ -64,10 +64,15 @@ class UserDirectoryManager():
             The created User.
         """
 
+        LOG.info(f'Adding new record with data: \
+            {name}, {address}, {phone}, {email}')
+
         if name is None:
+            LOG.error('An empty name was used to create a record')
             raise TypeError('name must not be none')
 
         if email in self.email_dir:
+            LOG.error(f'A repeated email was used to create a record: {email}')
             raise TypeError('User email already registered')
 
         new_user = self.User(name, address, phone, email)
@@ -85,7 +90,7 @@ class UserDirectoryManager():
             IOError
         """
 
-        LOG.error("Error")
+        LOG.info(f'Saving data to file: {file_path}')
         with open(file_path, "w") as fp:
             for _, user in self.email_dir.items():
                 fp.write(str(user) + '\n')
@@ -100,6 +105,7 @@ class UserDirectoryManager():
             IOError
         """
 
+        LOG.info(f'Opening file to load data: {file_path}')
         with open(file_path, "r") as fp:
             for line in fp:
                 values = [data.rstrip('\n') for data in line.split(',')]
@@ -115,5 +121,5 @@ class UserDirectoryManager():
             The User with the corresponding email or None if
             the User is not found.
         """
-
+        LOG.info(f'Searching for email: {email}')
         return self.email_dir.get(email, None)
