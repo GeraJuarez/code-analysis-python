@@ -1,4 +1,9 @@
 import csv
+import logging
+import logging.config
+
+logging.config.fileConfig('logging.conf')
+LOG = logging.getLogger(__name__)
 
 
 class DataSorter(object):
@@ -13,7 +18,7 @@ class DataSorter(object):
 
         self.data = []
 
-    def set_input_data(self, file_path_name): # log
+    def set_input_data(self, file_path_name):
         """Read the csv file in the specified path
 
         Args:
@@ -23,10 +28,14 @@ class DataSorter(object):
             TypeError, IOError
         """
 
+        LOG.info(f'Reading data from file: {file_path_name}')
+
         if file_path_name is None:
+            LOG.error('Encountered empty file path')
             raise TypeError('File path must not be None')
 
         if not file_path_name.endswith('.csv'):
+            LOG.error('Encountered non-csv file to read')
             raise IOError('File must be a csv file')
 
         with open(file_path_name, 'r') as fp:
@@ -34,7 +43,7 @@ class DataSorter(object):
             for row in reader:
                 self.data += row
 
-    def set_output_data(self, file_path_name): # log
+    def set_output_data(self, file_path_name):
         """Write a csv file in the specified path with the saved data
 
         Args:
@@ -43,6 +52,8 @@ class DataSorter(object):
         Raises:
             IOError
         """
+
+        LOG.info(f'Writing data to path: {file_path_name}')
 
         with open(file_path_name, 'w') as fp:
             writer = csv.writer(fp)
@@ -62,10 +73,14 @@ class DataSorter(object):
             TypeError
         """
 
+        LOG.info('Executing merge sort')
+
         if data is None:
+            LOG.info('Using data from DataSorter object')
             data = self.data
 
         if type(data) is not list:
+            LOG.error(f'Incorrect datatype used as argument" {type(data)}')
             raise TypeError('given data must be a list')
 
         self.__merge_sort(data, 0, len(data))
