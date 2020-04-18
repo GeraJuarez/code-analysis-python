@@ -70,7 +70,7 @@ class TestingUserManager(unittest.TestCase):
         self.assertEqual('name', values[0])
 
     def test_load_file(self):
-        """Test that the class reads all Usres from file.
+        """Test that the class reads all Users from file.
         """
 
         udm = UDM()
