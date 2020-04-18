@@ -1,0 +1,42 @@
+2020-04-18 13:25:27,236 - __main__ - INFO: Hey!
+2020-04-18 13:26:11,141 - __main__ - INFO: Hey!
+2020-04-18 13:36:59,360 - UserDirectoryManager - INFO: Adding new record with data:             name, g@g.com, 22, Somewhere
+2020-04-18 13:36:59,360 - UserDirectoryManager - INFO: Adding new record with data:             None, g@g.com, 22, Somewhere
+2020-04-18 13:36:59,360 - UserDirectoryManager - ERROR: An empty name was used to create a record
+2020-04-18 13:36:59,360 - UserDirectoryManager - INFO: Opening file to load data: users_out.txt
+2020-04-18 13:36:59,361 - UserDirectoryManager - INFO: Adding new record with data:             name, somewhere, 22, g@g.com
+2020-04-18 13:36:59,361 - UserDirectoryManager - INFO: Saving data to file: users_out.txt
+2020-04-18 13:36:59,361 - UserDirectoryManager - INFO: Adding new record with data:             name, somewhere, 22, g@g.com
+2020-04-18 13:36:59,361 - UserDirectoryManager - INFO: Searching for email: g@g.com
+2020-04-18 13:36:59,361 - UserDirectoryManager - INFO: Searching for email: g2@g.com
+2020-04-18 13:36:59,361 - UserDirectoryManager - INFO: Adding new record with data:             name, g@g.com, 22, Somewhere
+2020-04-18 13:36:59,361 - UserDirectoryManager - INFO: Searching for email: 22
+2020-04-18 13:41:25,103 - UserDirectoryManager - INFO: Adding new record with data:             name, g@g.com, 22, Somewhere
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Adding new record with data:             None, g@g.com, 22, Somewhere
+2020-04-18 13:41:25,104 - UserDirectoryManager - ERROR: An empty name was used to create a record
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Opening file to load data: users_out.txt
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Adding new record with data:             name, somewhere, 22, g@g.com
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Searching for email: g@g.com
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Adding new record with data:             name, somewhere, 22, g@g.com
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Saving data to file: users_out.txt
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Adding new record with data:             name, somewhere, 22, g@g.com
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Searching for email: g@g.com
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Searching for email: g2@g.com
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Adding new record with data:             name, g@g.com, 22, Somewhere
+2020-04-18 13:41:25,104 - UserDirectoryManager - INFO: Searching for email: 22
+2020-04-18 13:47:05,662 - DataSorter - INFO: Reading data from file: sample.csv
+2020-04-18 13:47:05,663 - DataSorter - INFO: Executing merge sort
+2020-04-18 13:47:05,663 - DataSorter - INFO: Using data from DataSorter object
+2020-04-18 13:47:05,663 - DataSorter - INFO: Reading data from file: sample.txt
+2020-04-18 13:47:05,663 - DataSorter - ERROR: Encountered non-csv file to read
+2020-04-18 13:47:05,663 - DataSorter - INFO: Reading data from file: None
+2020-04-18 13:47:05,663 - DataSorter - ERROR: Encountered empty file path
+2020-04-18 13:47:05,663 - DataSorter - INFO: Executing merge sort
+2020-04-18 13:47:05,663 - DataSorter - INFO: Executing merge sort
+2020-04-18 13:47:05,663 - DataSorter - INFO: Executing merge sort
+2020-04-18 13:47:05,663 - DataSorter - INFO: Using data from DataSorter object
+2020-04-18 13:47:05,663 - DataSorter - INFO: Executing merge sort
+2020-04-18 13:47:05,663 - DataSorter - INFO: Reading data from file: sample.csv
+2020-04-18 13:47:05,663 - DataSorter - INFO: Executing merge sort
+2020-04-18 13:47:05,663 - DataSorter - INFO: Using data from DataSorter object
+2020-04-18 13:47:05,663 - DataSorter - INFO: Writing data to path: out.csv
