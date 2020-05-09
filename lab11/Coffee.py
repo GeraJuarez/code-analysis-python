@@ -7,6 +7,6 @@ class Coffee():
 
 
 class CoffeeSelector():
-    BLACK: int = 0
+    AMERICANO: int = 0
     EXPRESSO: int = 1
     CAPPUCCINO: int = 2

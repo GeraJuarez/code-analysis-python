@@ -8,4 +8,4 @@ class SimpleCoffeeMachineAdapter(ISimpleCoffeeMachine):
         self.advCoffeeMachine: IAdvCoffeeMachine = advCoffeeMachine
 
     def brewCoffee(self) -> Coffee:
-        return self.advCoffeeMachine.brewCoffee(CoffeeSelector.BLACK)
+        return self.advCoffeeMachine.brewCoffee(CoffeeSelector.AMERICANO)
